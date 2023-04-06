@@ -9,14 +9,15 @@
     android:background="@color/white"
     android:fitsSystemWindows="true">
 
+
     <fragment
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:navGraph="@navigation/navigation"
         app:defaultNavHost="true"
-        android:id="@+id/fragmentContainerView"
-        />
+        android:id="@+id/fragmentContainerView">
+    </fragment>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"

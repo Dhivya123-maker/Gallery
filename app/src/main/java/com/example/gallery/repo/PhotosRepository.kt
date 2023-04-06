@@ -1,9 +1,10 @@
-package com.example.gallery.repository
+package com.example.gallery.repo
 
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.liveData
 import com.example.gallery.api.PhotosApi
+import com.example.gallery.paging.SearchPagingSource
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -21,15 +22,7 @@ class PhotosRepository @Inject constructor(val photosApi: PhotosApi) {
         ).liveData
 
 
-    fun getImageResults() =
-        Pager(
-            config = PagingConfig(
-                pageSize = 20,
-                maxSize = 100,
-                enablePlaceholders = false
-            ),
-            pagingSourceFactory = {HomePagingSource(photosApi)}
-        ).liveData
+
 
 
 

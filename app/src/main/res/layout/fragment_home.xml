@@ -26,6 +26,7 @@
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:layout_below="@+id/textView">
+
   <androidx.recyclerview.widget.RecyclerView
       android:id="@+id/rvPhotos"
       tools:listitem="@layout/list_item_photos"
@@ -33,6 +34,7 @@
       android:layout_height="wrap_content"
       android:layout_marginTop="24dp"
       android:layout_marginEnd="8dp"
+      app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
       android:layout_marginStart="8dp"
       android:paddingBottom="15dp"
       />
@@ -42,8 +44,9 @@
       style="?android:attr/progressBarStyle"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:id="@+id/progressBarSearch"
-     android:layout_centerInParent="true"
+      android:id="@+id/progressBar"
+      android:layout_alignParentBottom="true"
+      android:layout_centerHorizontal="true"
       />
 
 </RelativeLayout>

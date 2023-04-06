@@ -10,5 +10,7 @@ data class PhotosResponse(
     val photos: Photos?,
     @Json(name = "stat")
     val stat: String?
-)
+) {
+
+}
 
